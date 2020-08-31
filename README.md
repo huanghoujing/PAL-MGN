@@ -1,4 +1,4 @@
-#### About
+# About
 
 This is the official implementation of `MGN vs. MGN+PS` for paper **Improve Person Re-Identification With Part Awareness Learning**, TIP 2020.
 
@@ -15,21 +15,21 @@ This is the official implementation of `MGN vs. MGN+PS` for paper **Improve Pers
 ```
 
 
-#### Requirements
+# Requirements
 - Python 3
 - Pytorch 0.4.1
 - Torchvision 0.2.1
 - No special requirement for sklearn version
 - 4 GPUs
 
-#### Datasets
+# Datasets
 
 - Market1501
 - CUHK03
 - Duke
 - MSMT17
 
-#### Dataset Path
+# Dataset Path
 
 Under project dir
 - Market-1501-v15.09.15
@@ -51,25 +51,25 @@ The part segmentation labels (only used during training) for datasets can be dow
 
 The JPEG images of CUHK03-NP (`cuhk03-np-jpg/detected`) can be downloaded from [Baidu Cloud](https://pan.baidu.com/s/1ha9uAtVzX1hFG3piqcdvCg) (password `vtjp`) or [Google Drive](https://drive.google.com/drive/folders/1lGaQ3I9eYtBEYHq2nYubuO_N0PeY4SKB?usp=sharing).
 
-#### Models
+# Models
 
 - MGN: `bash train_mgn.sh`
 - MGN+PS: `bash train_s_ps_erase_ps_label.sh`
 
-#### Train Augmentation
+# Train Augmentation
 
 - Flip
 - Random Erasing
 
-#### Test Augmentation
+# Test Augmentation
 
 - Flip
 
-#### Visualize Activation Map & Grad-cam
+# Visualize Activation Map & Grad-cam
 
 - visualize_v1.py
 
-#### Examples
+# Examples
 
 - Train `MGN` on Market1501
     ```bash
@@ -108,13 +108,13 @@ The JPEG images of CUHK03-NP (`cuhk03-np-jpg/detected`) can be downloaded from [
     gpus=0,1,2,3 python_exc=python train_set=msmt17 testset_names=msmt17 only_test=True use_feat_cache=True test_which_feat=1 bash train_s_ps_erase_ps_label.sh;
     ```
 
-#### Code Clarity
+# Code Clarity
 
 Note that
 - The content about `keypoints`, `Part Aligned Pooling (PAP)`, `occluded ReID datasets`, `cd_ps_lw` are not related to the paper, and can simply be ignored, when you are reading the code.
 - This repository is mainly for reproducibility, not for efficient engineering exploitation.
 - To avoid introducing new bugs, I did not clean up this part of code.
 
-#### Acknowledgement
+# Acknowledgement
 
 The implementation of MGN is originated from [MGN-pytorch](https://github.com/seathiefwang/MGN-pytorch), with some modifications.
